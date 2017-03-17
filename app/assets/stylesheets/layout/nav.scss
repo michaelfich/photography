@@ -1,0 +1,26 @@
+.primary-nav {
+  $nav-bar-height: 60px;
+
+  @include grid-container;
+  background: $color-light-gray;
+
+  &__logo {
+    @include grid-column(6);
+    font: 700 1.25em $heading-font-family;
+    line-height: $nav-bar-height;
+  }
+
+  &__list {
+    @include grid-column(6);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__list-item a {
+    display: block;
+    height: $nav-bar-height;
+    padding: 0 8px;
+    line-height: $nav-bar-height;
+  }
+}
