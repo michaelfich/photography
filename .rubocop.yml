@@ -1,0 +1,20 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - tmp/**/*
+    - db/**/*
+    - spec/**/*
+    - vendor/**/*
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.4
+Rails:
+  Enabled: true
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 20
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
