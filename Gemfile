@@ -16,7 +16,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
-
+gem 'bourbon', '~> 4.3', '>= 4.3.3'
+gem 'neat', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do

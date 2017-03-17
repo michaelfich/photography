@@ -1,0 +1,17 @@
+scss_files: 'app/assets/stylesheets/**/*.scss'
+
+linters:
+  PropertySortOrder:
+    order: smacss
+  SelectorFormat:
+    convention: hyphenated_BEM
+  LeadingZero:
+    style: include_zero
+  ColorVariable:
+    enabled: false
+  EmptyRule:
+    enabled: false
+  ImportantRule:
+    enabled: false
+  PseudoElement:
+    enabled: false
