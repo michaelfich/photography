@@ -1,4 +1,4 @@
-500PX_CONSUMER_KEY: <CONSUMER_KEY_VALUE>
+five_hundred_pixels_consumer_key: <CONSUMER_KEY_VALUE>
 
 production:
-  500PX_CONSUMER_KEY: <CONSUMER_KEY_VALUE>
+  five_hundred_pixels_consumer_key: <CONSUMER_KEY_VALUE>

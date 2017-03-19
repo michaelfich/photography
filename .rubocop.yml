@@ -3,13 +3,14 @@ AllCops:
     - bin/**/*
     - tmp/**/*
     - db/**/*
-    - spec/**/*
     - vendor/**/*
   DisplayCopNames: true
   DisplayStyleGuide: true
   TargetRubyVersion: 2.4
 Rails:
   Enabled: true
+Bundler/OrderedGems:
+  Enabled: false
 Metrics/LineLength:
   Max: 120
 Metrics/MethodLength:

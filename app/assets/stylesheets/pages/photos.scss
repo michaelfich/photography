@@ -1,0 +1,32 @@
+.photo-gallery {
+  @include grid-container;
+  padding: 20px 0;
+
+  &__list-item {
+    @include grid-column(2);
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid rgba(200, 200, 200, 1);
+    border-radius: 2px;
+    background: rgba(245, 245, 245, 1);
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__user {
+    position: relative;
+    // background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__user-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 0;
+    border: 2px solid #fff;
+    border-radius: 100%;
+  }
+}
