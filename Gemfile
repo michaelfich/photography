@@ -17,6 +17,7 @@ gem 'figaro'
 gem 'bourbon', '~> 4.3', '>= 4.3.3'
 gem 'neat', '~> 2.0'
 gem 'rest-client', '~> 2.0', '>= 2.0.1'
+gem 'omniauth-500px'
 
 group :development, :test do
   gem 'pry-rails'

@@ -56,6 +56,7 @@ GEM
       thor (~> 0.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    hashie (3.5.5)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.1)
@@ -84,6 +85,15 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    oauth (0.5.1)
+    omniauth (1.6.1)
+      hashie (>= 3.4.6, < 3.6.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-500px (1.0.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
     pg (0.18.4)
     pkg-config (1.1.7)
     pry (0.10.4)
@@ -194,6 +204,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   neat (~> 2.0)
+  omniauth-500px
   pg
   pkg-config (~> 1.1, >= 1.1.7)
   pry-rails

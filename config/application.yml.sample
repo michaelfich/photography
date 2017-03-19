@@ -1,4 +1,6 @@
-five_hundred_pixels_consumer_key: <CONSUMER_KEY_VALUE>
+five_hundred_pixels_consumer_key: <CONSUMER_KEY>
+five_hundred_pixels_consumer_secret: <SECRET_KEY>
 
 production:
-  five_hundred_pixels_consumer_key: <CONSUMER_KEY_VALUE>
+  five_hundred_pixels_consumer_key: <CONSUMER_KEY>
+  five_hundred_pixels_consumer_secret: <SECRET_KEY>
