@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.from_five_hundred_pixels(env['omniauth.auth'])
+    user = User.from_five_hundred_pixels(request.env['omniauth.auth'])
     sign_in(:user, user)
     redirect_to root_path
   end
