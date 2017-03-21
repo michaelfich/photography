@@ -24,6 +24,7 @@ gem 'font-awesome-rails'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'factory_girl_rails', '~> 4.8'
 end
 
 group :development do
