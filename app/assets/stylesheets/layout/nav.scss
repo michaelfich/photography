@@ -17,10 +17,29 @@
     justify-content: flex-end;
   }
 
-  &__list-item a {
-    display: block;
+  &__list-item {
+  }
+
+  &__oauth-link,
+  &__oauth-link:active,
+  &__oauth-link:visited,
+  &__oauth-link:hover {
+    display: flex;
+    align-items: center;
     height: $nav-bar-height;
-    padding: 0 8px;
+    margin: 0;
+    padding: 0 8px 0 16px;
+    background: $color-dark-gray;
+    color: $color-clouds;
+    font-size: 0.9em;
+    font-weight: bold;
     line-height: $nav-bar-height;
+    text-transform: uppercase;
+  }
+
+  &__oauth-logo {
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
   }
 }

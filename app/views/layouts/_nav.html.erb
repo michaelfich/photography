@@ -3,8 +3,11 @@
     <div class='primary-nav__logo'>Photography</div>
     <ul class='primary-nav__list'>
       <% unless user_signed_in? %>
-        <li class='primary-nav__list-item'>
-          <%= link_to 'Sign in with 500px', '/auth/500px' %>
+        <li class='primary-nav__list-item primary-nav__list-item--sign-in'>
+          <%= link_to '/auth/500px', class: 'primary-nav__oauth-link' do %>
+            <span>Sign in with</span>
+            <%= image_tag '500px', alt: '500px Logo', class: 'primary-nav__oauth-logo' %>
+          <% end %>
         </li>
       <% else %>
         <li class='primary-nav__list-item'>

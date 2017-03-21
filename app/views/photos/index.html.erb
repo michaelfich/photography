@@ -1,14 +1,22 @@
-<ul class='photo-gallery'>
-  <% @photos.each do |photo| %>
-    <li class='photo-gallery__list-item'>
-      <%= link_to "https://500px.com#{photo.url}" do %>
-        <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
-      <% end %>
-      <div class='photo-gallery__favorite'>
-        <%= link_to favorite_photo_path(photo.id), method: :patch, remote: true, class: 'photo-gallery__favorite-icon' do %>
-          <%= fa_icon 'heart' %>
-        <% end  %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<div class='photo-gallery'>
+  <header class='photo-gallery__header'>
+    <h2>Photo Gallery</h2>
+    <h3>The top 100 rated photographs on 500px</h3>
+  </header>
+
+  <ul class='photo-gallery__list'>
+    <% @photos.each do |photo| %>
+      <li class='photo-gallery__list-item'>
+        <%= link_to "https://500px.com#{photo.url}" do %>
+          <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
+        <% end %>
+        <div class='photo-gallery__favorite'>
+          <%= link_to favorite_photo_path(photo.id), method: :patch, remote: true,
+                      class: 'photo-gallery__favorite-icon' do %>
+            <%= fa_icon 'heart' %>
+          <% end  %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -4,8 +4,38 @@ $image-size: 140px;
 .photo-gallery {
   @include grid-container;
   @include grid-collapse;
-  width: ($image-size * 6);
+  width: ($image-size * 6) + 22;
   margin: 0 auto;
+
+  &__header {
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: center;
+
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    @include clearfix;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid $color-silver;
+    background-color: $color-clouds;
+  }
 
   &__list-item {
     @include grid-column(2);
