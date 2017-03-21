@@ -1,10 +1,10 @@
 <ul class='photo-gallery'>
   <% @photos.each do |photo| %>
     <li class='photo-gallery__list-item'>
-      <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
-      <div class='photo-gallery__user'>
-        <img src="<%= photo.user.dig(:avatars, :large) %>" alt="<%= photo.user.dig(:fullname) %>" class='photo-gallery__user-image'>
-      </div>
+      <%= link_to "https://500px.com#{photo.url}" do %>
+        <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
+      <% end %>
+      <%= link_to 'Favorite', favorite_photo_path(photo.id), method: :patch, remote: true, class: 'photo-gallery__favorite' %>
     </li>
   <% end %>
 </ul>

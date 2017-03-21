@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :photos, only: :index
+  resources :photos, only: :index do
+    member do
+      patch :favorite
+    end
+  end
 
   get '/auth/500px/callback', to: 'sessions#create'
   devise_for :users, path: '', skip: [:session, :password, :registration, :confirmation]
