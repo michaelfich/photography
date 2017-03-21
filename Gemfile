@@ -17,8 +17,9 @@ gem 'figaro'
 gem 'bourbon', '~> 4.3', '>= 4.3.3'
 gem 'neat', '~> 2.0'
 gem 'rest-client', '~> 2.0', '>= 2.0.1'
-gem 'omniauth-500px', git: 'git://github.com/arthurnn/omniauth-500px.git'
 gem 'devise'
+gem 'omniauth-500px', git: 'git://github.com/arthurnn/omniauth-500px.git'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'pry-rails'

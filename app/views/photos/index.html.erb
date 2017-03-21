@@ -4,7 +4,11 @@
       <%= link_to "https://500px.com#{photo.url}" do %>
         <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
       <% end %>
-      <%= link_to 'Favorite', favorite_photo_path(photo.id), method: :patch, remote: true, class: 'photo-gallery__favorite' %>
+      <div class='photo-gallery__favorite'>
+        <%= link_to favorite_photo_path(photo.id), method: :patch, remote: true, class: 'photo-gallery__favorite-icon' do %>
+          <%= fa_icon 'heart' %>
+        <% end  %>
+      </div>
     </li>
   <% end %>
 </ul>
