@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/michaelfich/omniauth-500px.git
-  revision: 0f9da6981b74b5869d2ef7c7e3b17736abbf2ae6
-  branch: add-multijson-dependency
+  remote: git://github.com/arthurnn/omniauth-500px.git
+  revision: a7b7bed98d1e810d2f09ec007083ac441184e09d
   specs:
     omniauth-500px (1.0.0)
       multi_json
