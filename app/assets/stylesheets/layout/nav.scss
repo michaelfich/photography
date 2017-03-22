@@ -2,7 +2,8 @@
   $nav-bar-height: 60px;
 
   @include grid-container;
-  background: $color-light-gray;
+  background: $color-dark-gray;
+  color: $color-light-gray;
 
   &__logo {
     @include grid-column(6);
@@ -35,6 +36,13 @@
     font-weight: bold;
     line-height: $nav-bar-height;
     text-transform: uppercase;
+  }
+
+  &__oauth-link--signout,
+  &__oauth-link--signout:active,
+  &__oauth-link--signout:visited,
+  &__oauth-link--signout:hover {
+    padding: 0 16px;
   }
 
   &__oauth-logo {
