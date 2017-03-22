@@ -11,10 +11,12 @@ Rails:
   Enabled: true
 Bundler/OrderedGems:
   Enabled: false
+Metrics/AbcSize:
+  Max: 40
 Metrics/LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 20
+  Max: 25
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
