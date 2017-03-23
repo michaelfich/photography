@@ -1,6 +1,6 @@
 # [Photography](https://photograph.michaelfich.com/)
 
-[![Build Status](https://travis-ci.org/michaelfich/photography.svg?branch=master)](https://travis-ci.org/michaelfich/photography)
+[![Build Status](https://travis-ci.org/michaelfich/photography.svg?branch=master)](https://travis-ci.org/michaelfich/photography) [![Code Climate](https://codeclimate.com/github/michaelfich/photography/badges/gpa.svg)](https://codeclimate.com/github/michaelfich/photography)
 
 ## Description
 
