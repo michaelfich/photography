@@ -1,0 +1,15 @@
+language: ruby
+rvm: 2.4.0
+sudo: false
+services:
+  - postgresql
+cache:
+  bundler: true
+addons:
+  postgresql: '9.4'
+before_script:
+  - mv config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
+script:
+  - bundle exec rubocop
+  - bundle exec rspec spec

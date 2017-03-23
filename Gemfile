@@ -24,8 +24,9 @@ gem 'omniauth-500px', git: 'git://github.com/arthurnn/omniauth-500px.git'
 gem 'font-awesome-rails'
 gem 'f00px'
 
-group :development, :test do
+group :development, :test, :ci do
   gem 'pry-rails'
+  gem 'rubocop'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.8'
   gem 'capybara', '~> 2.13'
