@@ -5,26 +5,21 @@ class PhotosController < ApplicationController
   BASE_API_ENDPOINT = 'https://api.500px.com'.freeze
 
   def index
-    photo_api_endpoint = "#{BASE_API_ENDPOINT}/v1/photos"
-    photo_query_params = {
-      feature: 'popular',
-      rpp: '100',
-      consumer_key: Figaro.env.five_hundred_pixels_consumer_key
-    }
-    response = RestClient.get(photo_api_endpoint, params: photo_query_params)
+    photo_url = "#{BASE_API_ENDPOINT}/v1/photos"
+    photo_query_params = {}
+    photo_query_params[:feature] = 'popular'
+    photo_query_params[:rpp] = '100'
+    photo_query_params[:consumer_key] = Figaro.env.five_hundred_pixels_consumer_key
+    response = @client.get(photo_url, photo_query_params)
     @photos = JSON.parse(response.body)['photos'].map { |photo| Photo.new(photo) }
   end
 
   def favorite
-    @client.post("photos/#{params[:id]}/vote", vote: 1)
-  rescue RestClient::Unauthorized => e
-    logger.error e.message
+    vote_on_photo(params[:id], true)
   end
 
   def unfavorite
-    @client.post("photos/#{params[:id]}/vote", vote: 0)
-  rescue RestClient::Unauthorized => e
-    logger.error e.message
+    vote_on_photo(params[:id], false)
   end
 
   private
@@ -37,5 +32,11 @@ class PhotosController < ApplicationController
     @client = F00px::Client.new
     @client.token = current_user.oauth_token
     @client.token_secret = current_user.oauth_token_secret
+  end
+
+  def vote_on_photo(id, favorite)
+    api_endpoint = "#{BASE_API_ENDPOINT}/v1/photos/#{id}/vote"
+    query_params = { vote: favorite.to_i }
+    @client.post(api_endpoint, query_params)
   end
 end
