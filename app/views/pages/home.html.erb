@@ -1,0 +1,10 @@
+<h1 class='home__primary'>Photography</h1>
+<summary class='home__summary'>
+  Sign in and view the most popular photographs on 500px in a concise
+  gallery tailored to let you view and compare several photos at the
+  same time, and choose your favorites among them.
+</summary>
+<%= link_to '/auth/500px', class: 'home__login' do %>
+  <span class='home__login-text'>Sign in with</span>
+  <%= image_tag '500px.jpg', alt: '500px Logo', class: 'home__500px-logo' %>
+<% end %>
