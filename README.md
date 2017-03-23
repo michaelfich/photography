@@ -1,6 +1,6 @@
 # [Photography](https://photograph.michaelfich.com/)
 
-[![Build Status](https://travis-ci.org/michaelfich/photography.svg?branch=master)](https://travis-ci.org/michaelfich/photography) [![Code Climate](https://codeclimate.com/github/michaelfich/photography/badges/gpa.svg)](https://codeclimate.com/github/michaelfich/photography)
+[![Build Status](https://travis-ci.org/michaelfich/photography.svg?branch=master)](https://travis-ci.org/michaelfich/photography) [![Code Climate](https://codeclimate.com/github/michaelfich/photography/badges/gpa.svg)](https://codeclimate.com/github/michaelfich/photography) [![Test Coverage](https://codeclimate.com/github/michaelfich/photography/badges/coverage.svg)](https://codeclimate.com/github/michaelfich/photography/coverage) [![Issue Count](https://codeclimate.com/github/michaelfich/photography/badges/issue_count.svg)](https://codeclimate.com/github/michaelfich/photography)
 
 ## Description
 

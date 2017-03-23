@@ -7,6 +7,8 @@ cache:
   bundler: true
 addons:
   postgresql: '9.4'
+  code_climate:
+    repo_token: 6a73aca06d8a5f502e2f10df0f1c9162aa86a01a292351f2810ccf16107959f0
 before_script:
   - mv config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
