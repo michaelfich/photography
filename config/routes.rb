@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :photos, only: :index do
     member do
       patch :favorite
+      patch :unfavorite
     end
   end
 

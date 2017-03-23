@@ -9,23 +9,23 @@ class User < ApplicationRecord
   end
 
   class << self
-    def from_five_hundred_pixels(params)
-      user = find_by(provider: 'fiveHundredPx', uid: params['uid']) || create_from_five_hundred_pixels(params)
+    def from_five_hundred_pixels(args)
+      user = find_by(provider: 'fiveHundredPx', uid: args['uid']) || create_from_five_hundred_pixels(args)
       user.update_attributes!(
-        consumer_key: params['extra'].access_token.consumer.key,
-        consumer_secret: params['extra'].access_token.consumer.secret,
-        oauth_token: params['extra'].access_token.params[:oauth_token],
-        oauth_token_secret: params['extra'].access_token.params[:oauth_token_secret]
+        consumer_key: args['extra'].access_token.consumer.key,
+        consumer_secret: args['extra'].access_token.consumer.secret,
+        oauth_token: args['extra'].access_token.params[:oauth_token],
+        oauth_token_secret: args['extra'].access_token.params[:oauth_token_secret]
       )
       user
     end
 
-    def create_from_five_hundred_pixels(params)
+    def create_from_five_hundred_pixels(args)
       create! do |user|
-        user.name = params['info']['name']
-        user.email = params['info']['email']
+        user.name = args['info']['name']
+        user.email = args['info']['email']
         user.provider = 'fiveHundredPx'
-        user.uid = params['uid']
+        user.uid = args['uid']
       end
     end
   end

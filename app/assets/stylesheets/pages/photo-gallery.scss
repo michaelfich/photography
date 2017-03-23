@@ -42,7 +42,7 @@ $image-size: 140px;
     @include grid-column(2);
     position: relative;
 
-    &:hover .photo-gallery__favorite {
+    &:hover .photo-gallery__mouseover {
       display: flex;
     }
   }
@@ -53,15 +53,23 @@ $image-size: 140px;
     height: $image-size;
   }
 
-  &__favorite {
+  &__mouseover {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
+    justify-content: center;
+    width: $image-size;
+    height: $image-size;
+  }
+
+  &__favorite {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: $image-size;
     height: $image-size;
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1;
   }
 
@@ -72,10 +80,21 @@ $image-size: 140px;
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 2px solid $color-white;
     border-radius: 100%;
-    background: $color-pomegranate;
-    color: $color-white;
     box-shadow: 0 5px 10px $color-wet-asphalt;
+  }
+
+  &__favorite-icon--select,
+  &__favorite-icon--select:hover {
+    border: 2px solid $color-transparent;
+    background: $color-alizarin;
+    color: $color-white;
+  }
+
+  &__favorite-icon--unselect,
+  &__favorite-icon--unselect:hover {
+    border: 2px solid $color-alizarin;
+    background: $color-transparent;
+    color: $color-alizarin;
   }
 }

@@ -22,6 +22,7 @@ gem 'rest-client', '~> 2.0', '>= 2.0.1'
 gem 'devise'
 gem 'omniauth-500px', git: 'git://github.com/arthurnn/omniauth-500px.git'
 gem 'font-awesome-rails'
+gem 'f00px'
 
 group :development, :test do
   gem 'pry-rails'

@@ -8,13 +8,21 @@
     <% @photos.each do |photo| %>
       <li class='photo-gallery__list-item'>
         <%= link_to "https://500px.com#{photo.url}" do %>
-          <img src="<%= photo.image_url %>" alt="<%= photo.name %>" class='photo-gallery__image'>
+          <%= image_tag photo.image_url, alt: photo.name, class: 'photo-gallery__image' %>
         <% end %>
-        <div class='photo-gallery__favorite'>
-          <%= link_to favorite_photo_path(photo.id), method: :patch, remote: true,
-                      class: 'photo-gallery__favorite-icon' do %>
-            <%= fa_icon 'heart' %>
-          <% end  %>
+        <div class='photo-gallery__mouseover'>
+          <div class='photo-gallery__favorite'>
+            <%= link_to favorite_photo_path(photo.id), method: :patch, remote: true,
+                        class: 'photo-gallery__favorite-icon photo-gallery__favorite-icon--select' do %>
+              <%= fa_icon 'heart' %>
+            <% end  %>
+          </div>
+          <div class='photo-gallery__favorite photo-gallery__favorite--unselect'>
+            <%= link_to unfavorite_photo_path(photo.id), method: :patch, remote: true,
+                        class: 'photo-gallery__favorite-icon photo-gallery__favorite-icon--unselect' do %>
+              <%= fa_icon 'heart-o' %>
+            <% end  %>
+          </div>
         </div>
       </li>
     <% end %>
