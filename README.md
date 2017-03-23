@@ -1,4 +1,4 @@
-# Photography
+# [Photography](https://photograph.michaelfich.com/)
 
 [![Build Status](https://travis-ci.org/michaelfich/photography.svg?branch=master)](https://travis-ci.org/michaelfich/photography)
 
@@ -15,3 +15,9 @@ This app features a main page which prompts the user to login via their 500px ac
 5. You will be redirected to the photo gallery page (`/photos`)
 6. To favorite, or unfavorite, any photograph you can move your cursor over the photo and click the left icon to favorite, and right icon to unfavorite.  See picture below for example of favorite/unfavorite icons.
 ![Favorite and Unfavorite Photograph](app/assets/images/favorite.png)
+
+## Testing
+
+* The application has configured to run tests on TravisCI
+* All tests are written in RSpec
+* TravisCI will also require the code to pass [Rubocop](https://github.com/bbatsov/rubocop) linting for a successful build
